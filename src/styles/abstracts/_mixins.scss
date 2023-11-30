@@ -1,0 +1,78 @@
+// vendor prefix mixin
+
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{"-" + $prefix + "-" + $property}: $value;
+    #{$property}: $value;
+  }
+}
+
+// mixin for writing flexbox DRY
+@mixin flexbox-config(
+  $justify-content: false,
+  $flex: false,
+  $flex-direction: false,
+  $align-items: false
+) {
+  display: flex;
+
+  @if $justify-content != false {
+    justify-content: $justify-content;
+  }
+
+  @if $flex != false {
+    flex: $flex;
+  }
+
+  @if $flex-direction != false {
+    flex-direction: $flex-direction;
+  }
+
+  @if $align-items != false {
+    align-items: $align-items;
+  }
+}
+
+// Media query mixins
+
+@mixin xl-screens {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin lg-screens {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin lg-screens {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin md-screens {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin sm-screens {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin xs-screens {
+  @media (min-width: 1px) {
+    @content;
+  }
+}
+
+// @mixin lg-screens {
+//   @media (300px <= width >= 500px) {
+//     @content;
+//   }
+// }
