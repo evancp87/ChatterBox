@@ -2,10 +2,9 @@ import './globals.css';
 import type { Metadata } from 'next';
 import styles from '@/styles/style.module.css';
 import ReduxProvider from '@/components/ReduxProvider';
-import Favicon from '/public/images/favicon.ico';
-// import AuthProvider from "../components/AuthProvider";
+// import Favicon from '/public/images/favicon.ico';
+// import AuthProvider from "@/components/AuthProvider";
 import './globals.css';
-import Head from 'next/head';
 import { Gaegu } from 'next/font/google';
 
 const gaegu = Gaegu({
@@ -40,9 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="icon" href="/favicon.ico" sizes="any" type="image/x-icon" />
-      </Head>
+      <link rel="icon" href="/favicon.ico" sizes="any" type="image/x-icon" />
       <ReduxProvider>
         {/* <AuthProvider> */}
         <body className={`${styles.parent} ${gaegu.className}`}>
