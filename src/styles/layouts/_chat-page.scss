@@ -1,1 +1,84 @@
-@use "../abstracts" as a;
+// :root {
+//   --me:  #00FFCC;
+//   --you: #d3d3d3;
+// }
+
+
+.chat {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  width: calc(100% - 100px);
+  padding: 1em;
+  border: 1px solid #000000;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+ border-bottom: 1px solid #000000;
+}
+.chat-list {
+  width: max(90%, 300px);
+}
+.message-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.avatar {
+ max-width: 50px;
+height: 50px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0px 15px 5px 1px rgba(0,0,0,0.2);
+}
+
+// .message-bubble-container {
+  
+// }
+
+.message-details {
+  display: flex;
+  justify-content: space-between;
+}
+.message-bubble {
+/*   max-width: 100%; */
+  margin-block: 1em;
+  padding: 2em;
+  display: inline-block;
+border: 1px solid #000000
+}
+// .me {
+//   background: var(--me);
+// /*   display: flex; */
+// }
+
+
+// .friend {
+//   background: var(--you);
+// }
+
+.mine {
+  margin-inline-start: 10em;
+  
+}
+
+.message-bubble.me {
+   border-radius: 40px 50px 0 40px; 
+
+
+}
+
+
+.message-bubble.friend {
+  border-radius: 0 50px 40px 40px; 
+
+}
+
+.text-box {
+  border-radius: 10px;
+  padding: 2em;
+  width: max(95%, 100px)
+}

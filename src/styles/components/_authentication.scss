@@ -1,0 +1,10 @@
+@use "../abstracts/" as *;
+
+.parent {
+        width: calc(100% - 80px);
+        border: 2px dashed #000000;
+        min-height: 100dvh;
+        min-height: 100svh;
+        padding: 2em;
+        background-color: $user; 
+}

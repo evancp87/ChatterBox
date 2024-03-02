@@ -1,0 +1,16 @@
+{
+    "favorites.resources": [
+        {
+            "filePath": "src/store/services/usersSlice.ts",
+            "group": "Default"
+        },
+        {
+            "filePath": "src/components/Register.tsx",
+            "group": "Default"
+        },
+        {
+            "filePath": "src/components/Login.tsx",
+            "group": "Default"
+        }
+    ]
+}
